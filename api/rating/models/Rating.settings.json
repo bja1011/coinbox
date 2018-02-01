@@ -1,0 +1,20 @@
+{
+  "connection": "default",
+  "collectionName": "rating",
+  "info": {
+    "name": "rating",
+    "description": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "coins": {
+      "collection": "coin",
+      "via": "rating"
+    }
+  }
+}
