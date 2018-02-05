@@ -1,21 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Button from 'antd/lib/button';
+
 import './App.css';
+import Routes from './Routes';
+import {withRouter} from 'react-router';
+import {connect} from 'react-redux';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        {/*{this.props.user ? <Header user={this.props.user}/> : null}*/}
+        <div>
+          <Routes auth={this.props.user}/>
+        </div>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    user: state.user.data
+  };
+};
+
+export default withRouter(connect(mapStateToProps)(App));
