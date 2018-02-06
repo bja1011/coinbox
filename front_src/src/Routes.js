@@ -15,18 +15,18 @@ const Routes = (props) => {
 
   let routes = (
     <Switch>
-      <Route exact path={INDEX_PATH} component={Dashboard}/>
       <Route exact path={AUTH_LOGIN_PATH} component={Auth}/>
       <Route render={() => <Redirect to={AUTH_LOGIN_PATH}/>}/>
     </Switch>
   );
-  //
-  // if (props.auth) routes = (
-  //   <Switch>
-  //     <Route exact path={SETTINGS_PATH} component={Dashboard}/>
-  //     <Route render={() => <Redirect to={INDEX_PATH}/>}/>
-  //   </Switch>
-  // )
+
+  if (props.auth) routes = (
+    <Switch>
+      <Route exact path={INDEX_PATH} component={Dashboard}/>
+      <Route exact path={SETTINGS_PATH} component={Dashboard}/>
+      <Route render={() => <Redirect to={INDEX_PATH}/>}/>
+    </Switch>
+  )
 
   return (
     <div>
