@@ -6,11 +6,10 @@ import axios from 'axios';
 const login = (username, password) => {
   return new Promise((resolve, reject) => {
     axios.post(
-      'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDLmHtZtBT7ln4l5ankYHerXmChWhNiC8s',
+      'http://bearsoft.pl:1337/auth/local',
       {
-        email: username,
-        password: password,
-        returnSecureToken: true
+        identifier: username,
+        password: password
       }
     )
       .then(

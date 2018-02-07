@@ -26,7 +26,7 @@ const Routes = (props) => {
       <Route exact path={SETTINGS_PATH} component={Dashboard}/>
       <Route render={() => <Redirect to={INDEX_PATH}/>}/>
     </Switch>
-  )
+  );
 
   return (
     <div>
