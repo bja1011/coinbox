@@ -13,6 +13,8 @@ import Dashboard from './containers/Dashboard/Dashboard';
 
 const Routes = (props) => {
 
+  let className = 'full-height';
+
   let routes = (
     <Switch>
       <Route exact path={AUTH_LOGIN_PATH} component={Auth}/>
@@ -20,16 +22,20 @@ const Routes = (props) => {
     </Switch>
   );
 
-  if (props.auth) routes = (
-    <Switch>
-      <Route exact path={INDEX_PATH} component={Dashboard}/>
-      <Route exact path={SETTINGS_PATH} component={Dashboard}/>
-      <Route render={() => <Redirect to={INDEX_PATH}/>}/>
-    </Switch>
-  );
+  if (props.auth) {
+    className = '';
+    routes = (
+      <Switch>
+        <Route exact path={INDEX_PATH} component={Dashboard}/>
+        <Route exact path={SETTINGS_PATH} component={Dashboard}/>
+        <Route render={() => <Redirect to={INDEX_PATH}/>}/>
+      </Switch>
+    );
+  }
+
 
   return (
-    <div>
+    <div className={className}>
       {routes}
     </div>
   );

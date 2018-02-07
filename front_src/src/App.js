@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import './App.css';
 import Routes from './Routes';
@@ -9,11 +9,9 @@ import Header from "./containers/Header/Header";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        {this.props.user ? <Header user={this.props.user}/> : null}
-        <div>
-          <Routes auth={this.props.user}/>
-        </div>
+      <div className="App full-height">
+        {/*{this.props.user ? <Header user={this.props.user}/> : null}*/}
+        <Routes auth={this.props.user}/>
       </div>
     );
   }
