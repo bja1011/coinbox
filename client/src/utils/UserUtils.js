@@ -3,10 +3,12 @@
  */
 import axios from 'axios';
 
+const apiUrl = process.env.REACT_APP_API_HOST;
+
 const login = (username, password) => {
   return new Promise((resolve, reject) => {
     axios.post(
-      'http://bearsoft.pl:1337/auth/local',
+      apiUrl+'/auth/local',
       {
         identifier: username,
         password: password
