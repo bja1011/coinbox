@@ -1,0 +1,20 @@
+{
+  "connection": "default",
+  "collectionName": "usercoin",
+  "info": {
+    "name": "userCoin",
+    "description": ""
+  },
+  "attributes": {
+    "user": {
+      "model": "user",
+      "via": "userCoins",
+      "plugin": "users-permissions"
+    },
+    "coin": {
+      "model": "coin",
+      "via": "userCoin",
+      "plugin": ""
+    }
+  }
+}

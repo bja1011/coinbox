@@ -36,6 +36,10 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
+    },
+    "userCoins": {
+      "model": "usercoin",
+      "via": "user"
     }
   }
 }

@@ -1,0 +1,24 @@
+{
+  "connection": "default",
+  "collectionName": "coin",
+  "info": {
+    "name": "coin",
+    "description": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "coinRating": {
+      "model": "coinrating",
+      "via": "coin"
+    },
+    "userCoin": {
+      "model": "usercoin",
+      "via": "coin"
+    }
+  }
+}

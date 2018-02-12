@@ -1,0 +1,44 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/usercoin",
+      "handler": "UserCoin.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/usercoin/:_id",
+      "handler": "UserCoin.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/usercoin",
+      "handler": "UserCoin.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/usercoin/:_id",
+      "handler": "UserCoin.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/usercoin/:_id",
+      "handler": "UserCoin.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
