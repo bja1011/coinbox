@@ -12,13 +12,14 @@
     "code": {
       "type": "string"
     },
-    "coinRating": {
-      "model": "coinrating",
+    "rating": {
+      "model": "rating",
       "via": "coin"
     },
-    "userCoin": {
-      "model": "usercoin",
-      "via": "coin"
+    "userCoins": {
+      "collection": "userCoin",
+      "via": "coin_def",
+      "plugin": ""
     }
   }
 }

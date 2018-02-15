@@ -38,7 +38,7 @@
       "configurable": false
     },
     "userCoins": {
-      "model": "usercoin",
+      "collection": "usercoin",
       "via": "user"
     }
   }

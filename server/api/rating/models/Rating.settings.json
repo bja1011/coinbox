@@ -11,6 +11,10 @@
     },
     "description": {
       "type": "string"
+    },
+    "coin": {
+      "model": "coin",
+      "via": "rating"
     }
   }
 }
